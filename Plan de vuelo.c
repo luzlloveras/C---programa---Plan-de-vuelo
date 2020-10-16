@@ -8,9 +8,10 @@ float distancia(int, int, int, int);
 int cuad(int a);
 
 
-int main() {
+int main() 
+{
     int x1, y1, x2, y2, z;
-    float suma_dist=0;
+    float suma_dist = 0;
 
     printf("Ingrese coordenada x:\n");
     scanf("%d", &x1);
@@ -18,14 +19,15 @@ int main() {
     scanf("%d", &y1);
     printf("Ingrese coordenada x:\n");
     scanf("%d", &z);
-    while (z >= 0) {
-        x2=z;
+    while (z >= 0) 
+    {
+        x2 = z;
         printf("Ingrese coordenada y:\n");
         scanf("%d", &y2);
         suma_dist = suma_dist + distancia(x1, y1, x2, y2);
 
-        x1=x2; //desplazo x2 a x1
-        y1=y2; //desplazo y2 a y1
+        x1 = x2; //desplazo x2 a x1
+        y1 = y2; //desplazo y2 a y1
 
         printf("Ingrese coordenada x:\n");
         scanf("%d", &z);
@@ -33,14 +35,15 @@ int main() {
 
     printf("La distancia recorrida es: %.2f\n", suma_dist);
 
-
     return 0;
 }
 
-int cuad (int a) {
-    return a*a;
+int cuad (int a) 
+{
+    return a * a;
 }
 
-float distancia(int x1, int y1, int x2, int y2) {
-    return (sqrt ( cuad(x2-x1) + cuad(y2-y1) ));
+float distancia(int x1, int y1, int x2, int y2) 
+{
+    return (sqrt ( cuad(x2 - x1) + cuad(y2 - y1) ));
 }
